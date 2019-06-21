@@ -1,6 +1,6 @@
 # replacemarcchars - replace binary MARC characters
 
-replacemarcchars is a commandline command (Python3 program) that takes binary MARC records (e.g. originally stored in a JSON value) as input and replace some characters in it to be really binary MARC compatible.
+replacemarcchars is a commandline command (Python3 program) that takes binary MARC records/lines (e.g. originally stored in a JSON value) as input and replace some characters in it to be really binary MARC compatible.
 
 Following replace methods are available:
 * **decimal**: replaces '#29;', '#30;', '#31;' with "\x1D", "\x1E", "\x1F"
@@ -19,7 +19,7 @@ optional arguments:
 
 * example:
     ```
-    replacemarcchars < [BINARY MARC FROM E.G. JSON VALUE] > [TRUE BINARY MARC]
+    replacemarcchars < [BINARY MARC RECORDS/LINES FROM E.G. JSON VALUE] > [TRUE BINARY MARC]
     ```
 
 ## Run

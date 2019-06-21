@@ -13,7 +13,7 @@ REPLACE_METHODS = {
 
 def run():
     parser = argparse.ArgumentParser(prog='replacemarcchars',
-                                     description='takes binary MARC records (e.g. originally stored in a JSON value) as input and replace some characters in it to be really binary MARC compatible.',
+                                     description='takes binary MARC records/lines (e.g. originally stored in a JSON value) as input and replace some characters in it to be really binary MARC compatible.',
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     optional_arguments = parser._action_groups.pop()

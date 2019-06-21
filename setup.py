@@ -1,5 +1,5 @@
 """
-A Python3 program that takes binary MARC records (e.g. originally stored in a JSON value) as input and replace some characters in it to be really binary MARC compatible.
+A Python3 program that takes binary MARC records/lines (e.g. originally stored in a JSON value) as input and replace some characters in it to be really binary MARC compatible.
 """
 
 try:
@@ -9,7 +9,7 @@ except ImportError:
 
 setup(name='replacemarcchars',
       version='0.0.1',
-      description='a Python3 program that takes binary MARC records (e.g. originally stored in a JSON value) as input and replace some characters in it to be really binary MARC compatible.',
+      description='a Python3 program that takes binary MARC records/lines (e.g. originally stored in a JSON value) as input and replace some characters in it to be really binary MARC compatible.',
       url='https://github.com/slub/replacemarcchars',
       author='Bernhard Hering, Bo Ferri',
       author_email='bernhard.hering@slub-dresden.de, zazi@smiy.org',
