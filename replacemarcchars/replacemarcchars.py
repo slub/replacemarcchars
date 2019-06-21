@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
+import os
 import sys
 import argparse
 
@@ -29,8 +30,12 @@ def run():
     replace_method_tuple = REPLACE_METHODS.get(replace_method)
 
     for line in sys.stdin:
+        marc_record = line
         # remove line break
-        marc_record = line[0:-1]
+        lastchar = line[-1]
+        oslinebreak = os.linesep
+        if lastchar == oslinebreak:
+            marc_record = line[0:-1]
         for i in range(0, 3):
             marc_record = marc_record.replace(replace_method_tuple[0][i], replace_method_tuple[1][i])
 
