@@ -26,12 +26,15 @@ def run():
     args = parser.parse_args()
 
     replace_method = args.replace_method
+    replace_method_tuple = REPLACE_METHODS.get(replace_method)
 
     for line in sys.stdin:
+        # remove line break
+        marc_record = line[0:-1]
         for i in range(0, 3):
-            line = line.replace(REPLACE_METHODS.get(replace_method)[0][i], REPLACE_METHODS.get(replace_method)[1][i])
+            marc_record = marc_record.replace(replace_method_tuple[0][i], replace_method_tuple[1][i])
 
-        sys.stdout.write(line)
+        sys.stdout.write(marc_record)
 
 
 if __name__ == "__main__":
